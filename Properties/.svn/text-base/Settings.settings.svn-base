@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="JikagakiDesktop.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StartupHelpEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="StartupHelp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">直書きデスクトップとは・・・
+デスクトップ上にドラッグで線を直接書き込むことができるツールです。
+起動時は黒色のペンを持っている状態です。
+以下のキー操作が行えます。
+
+R で赤色のペンに持ち替えます。
+G で緑色のペンに持ち替えます。
+C で水色のペンに持ち替えます。
+Y で黄色のペンに持ち替えます。
+B で黒色のペンに持ち替えます。
+E で消しゴムに持ち替えます。
+Delete で書き込みを全て削除します。
+Esc で待機状態に（最小化）します。
+Alt + F4 で終了します。
+H でこの説明を表示します。
+</Value>
+    </Setting>
+    <Setting Name="Alpha" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
