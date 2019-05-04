@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyDescription("デスクトップに直接ペンで書き込む")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("直書きデスクトップ rev1.5.2019.05.03 nakazawa@3qi.net")]
+[assembly: AssemblyProduct("直書きデスクトップ rev1.6.2019.05.04 nakazawa@3qi.net")]
 [assembly: AssemblyCopyright("Copyright ©  2009-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

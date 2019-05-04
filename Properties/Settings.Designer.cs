@@ -42,18 +42,29 @@ namespace JikagakiDesktop.Properties {
 起動時は黒色のペンを持っている状態です。
 以下のキー操作が行えます。
 
-R で赤色のペンに持ち替えます。
-G で緑色のペンに持ち替えます。
-C で水色のペンに持ち替えます。
-Y で黄色のペンに持ち替えます。
+P でドラッグで自由線を描くモードに切り替えます。
+L でドラッグで直線を描くモードに切り替えます。
+F でドラッグで四角を描くモードに切り替えます。
+D でドラッグで楕円を描くモードに切り替えます。
+
 B で黒色のペンに持ち替えます。
-E で消しゴムに持ち替えます。
+W で白色のペンに持ち替えます。
+R で赤色のペンに持ち替えます。
+Y で黄色のペンに持ち替えます。
+C で水色のペンに持ち替えます。
+G で緑色のペンに持ち替えます。
+Space で消しゴムに持ち替えます。
+
 1～9 でペンの太さを切り替えます。
+
+Ctrl+Z で一つ前の状態に戻します。
 Delete で書き込みを全て削除します。
+Ctrl+S で書き込んだ内容を保存します。
+Ctrl+O で保存した内容を復元します。
 Esc で待機状態に（最小化）します。
-Alt + F4 で終了します。
-H でこの説明を表示します。
-")]
+F1 でこの説明を表示します。
+
+Alt + F4 で終了します。")]
         public string StartupHelp {
             get {
                 return ((string)(this["StartupHelp"]));
@@ -90,12 +101,24 @@ H でこの説明を表示します。
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public string StartupWidth {
+        public double StartupWidth {
             get {
-                return ((string)(this["StartupWidth"]));
+                return ((double)(this["StartupWidth"]));
             }
             set {
                 this["StartupWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("P")]
+        public string StartupTool {
+            get {
+                return ((string)(this["StartupTool"]));
+            }
+            set {
+                this["StartupTool"] = value;
             }
         }
     }

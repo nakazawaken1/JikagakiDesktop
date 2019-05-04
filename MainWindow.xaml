@@ -1,0 +1,48 @@
+﻿<Window x:Class="JikagakiDesktop.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    WindowStyle="None" AllowsTransparency="True" Background="Transparent" PreviewKeyDown="Window_PreviewKeyDown" StateChanged="Window_StateChanged" Closed="Window_Closed">
+    <Grid PreviewMouseLeftButtonUp="Grid_PreviewMouseLeftButtonUp" PreviewMouseMove="Grid_PreviewMouseMove" PreviewMouseLeftButtonDown="Grid_PreviewMouseLeftButtonDown">
+        <InkCanvas Name="InkCanvas" ForceCursor="True" Cursor="Pen"/>
+        <Line x:Name="Line" Opacity="0.5"/>
+        <Rectangle x:Name="Rectangle" Opacity="0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Ellipse x:Name="Ellipse" Opacity="0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="ペン(_P)" Click="CommandTool" InputGestureText="P" Tag="Tool"/>
+            <MenuItem Header="直線(_L)" Click="CommandTool" InputGestureText="L" Tag="Tool"/>
+            <MenuItem Header="四角(_F)" Click="CommandTool" InputGestureText="F" Tag="Tool"/>
+            <MenuItem Header="楕円(_D)" Click="CommandTool" InputGestureText="D" Tag="Tool"/>
+            <Separator/>
+            <MenuItem Header="黒色(_B)" Click="CommandColor" InputGestureText="B" Tag="Color"/>
+            <MenuItem Header="白色(_W)" Click="CommandColor" InputGestureText="W" Tag="Color"/>
+            <MenuItem Header="赤色(_R)" Click="CommandColor" InputGestureText="R" Tag="Color"/>
+            <MenuItem Header="黄色(_Y)" Click="CommandColor" InputGestureText="Y" Tag="Color"/>
+            <MenuItem Header="青色(_C)" Click="CommandColor" InputGestureText="C" Tag="Color"/>
+            <MenuItem Header="緑色(_G)" Click="CommandColor" InputGestureText="G" Tag="Color"/>
+            <MenuItem Header="消しゴム(_E)" Click="CommandColor" InputGestureText="Space" Tag="Color"/>
+            <Separator/>
+            <MenuItem Header="太さ(_T)">
+                <MenuItem Header="太さ1(_1)" Click="CommandThickness" InputGestureText="1" Tag="Thickness"/>
+                <MenuItem Header="太さ2(_2)" Click="CommandThickness" InputGestureText="2" Tag="Thickness"/>
+                <MenuItem Header="太さ3(_3)" Click="CommandThickness" InputGestureText="3" Tag="Thickness"/>
+                <MenuItem Header="太さ4(_4)" Click="CommandThickness" InputGestureText="4" Tag="Thickness"/>
+                <MenuItem Header="太さ5(_5)" Click="CommandThickness" InputGestureText="5" Tag="Thickness"/>
+                <MenuItem Header="太さ6(_6)" Click="CommandThickness" InputGestureText="6" Tag="Thickness"/>
+                <MenuItem Header="太さ7(_7)" Click="CommandThickness" InputGestureText="7" Tag="Thickness"/>
+                <MenuItem Header="太さ8(_8)" Click="CommandThickness" InputGestureText="8" Tag="Thickness"/>
+                <MenuItem Header="太さ9(_9)" Click="CommandThickness" InputGestureText="9" Tag="Thickness"/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="元に戻す(_U)" Click="CommandUndo" InputGestureText="Ctrl+Z"/>
+            <MenuItem Header="全消去(_I)" Click="CommandClear" InputGestureText="Delete"/>
+            <MenuItem Header="保存(_S)..." Click="CommandSave" InputGestureText="Ctrl+S"/>
+            <MenuItem Header="開く(_O)..." Click="CommandOpen" InputGestureText="Ctrl+O"/>
+            <MenuItem Header="最小化(_M)" Click="CommandMinimize" InputGestureText="Esc"/>
+            <MenuItem Header="ヘルプ(_H)..." Click="CommandHelp" InputGestureText="F1"/>
+            <Separator/>
+            <MenuItem Header="終了(_Q)" Click="CommandQuit" InputGestureText="Alt+F4"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+</Window>
